@@ -1,0 +1,32 @@
+|fourcount
+Z <= comb.DB_MAX_OUTPUT_PORT_TYPE
+clock => clock.IN1
+
+
+|fourcount|test4count:instname
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => always0.IN0
+CLRN => Q[3].IN1
+DNUP => Q.OUTPUTSELECT
+DNUP => Q.OUTPUTSELECT
+DNUP => Q.OUTPUTSELECT
+DNUP => Q.OUTPUTSELECT
+INDATA[0] => Q.DATAB
+INDATA[0] => Q[0]~reg0.ADATA
+INDATA[1] => Q.DATAB
+INDATA[1] => Q[1]~reg0.ADATA
+INDATA[2] => Q.DATAB
+INDATA[2] => Q[2]~reg0.ADATA
+INDATA[3] => Q.DATAB
+INDATA[3] => Q[3]~reg0.ADATA
+LDN => always0.IN0
+SETN => always0.IN0
+
+
